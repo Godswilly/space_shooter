@@ -1,17 +1,16 @@
-/* eslint-disable */ 
 import Phaser from 'phaser';
 
 export default class GameScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Game');
   }
- 
-  preload () {
+
+  preload() {
     // load images
-    this.load.image('logo', 'assets/logo.png');
+    this.load.image('logo', 'assets/image/logo.png');
   }
- 
-  create () {
+
+  create() {
     this.add.image(400, 300, 'logo');
   }
-};
+}
