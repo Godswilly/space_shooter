@@ -6,13 +6,15 @@ export default {
   width: 800,
   height: 600,
   pixelArt: true,
+  backgroundColor: '#2d2d2d',
+  roundPixels: true,
   dom: {
     createContainer: true,
   },
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 300 },
+      gravity: { x: 0, y: 0 },
       debug: false,
     },
   },
