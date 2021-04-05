@@ -1,6 +1,6 @@
-const axios = require('axios');
-//import axios from 'axios'
-const API_KEY = 'yH70Z5n0oU15qLEnrj0K';
+import axios from 'axios';
+
+const API_KEY = 'JEs0kzQgvvjQBRvlrgZH';
 const BASE = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 
 const save = (name, score) => {

@@ -1,12 +1,10 @@
+/* eslint-disable */
 import Phaser from 'phaser';
 import config from '../Config/config';
 
 export default class CreditsScene extends Phaser.Scene {
   constructor() {
     super('Credits');
-  }
-
-  preload() {
   }
 
   create() {
@@ -31,7 +29,7 @@ export default class CreditsScene extends Phaser.Scene {
       ease: 'Power1',
       duration: 3000,
       delay: 1000,
-      onComplete: () => {
+      onComplete: function() {
         this.destroy;
       },
     });
@@ -42,10 +40,10 @@ export default class CreditsScene extends Phaser.Scene {
       ease: 'Power1',
       duration: 8000,
       delay: 1000,
-      onComplete: () => {
-        this.madeByTween.destroy;
-        this.scene.start('Title');
-      }),
-    });
+      onComplete: function() {
+          this.madeByTween.destroy;
+          this.scene.start('Title');
+        }.bind(this)
+      });
   }
 }
