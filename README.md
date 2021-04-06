@@ -4,7 +4,19 @@ This project is an RPG game built with Phaser 3, a JavaScript game framework des
 
 ## Game Design Documentation
 
-[Link here](https://gamedevelopment.tutsplus.com/articles/how-and-why-to-write-a-great-game-design-document--cms-23545/)
+The Star-fall design process started with the idea of creating a simple and beautiful RPG.
+I got inspired by the RPG classic the supermario. Thanks to opengameart.org for posting all of these amazing sprites and tiles used in the game.
+ 
+I started by creating a platform game, with a movable character on a static window, that can jump and collect entities.
+ 
+The game’s entire map was built with Tiled on a 32 x 32 collection other than the cowboy that was built on 45 x 44 of squares.
+ 
+First I created player and coins to get scores, then I added the bullet so the player will have some obstacles to run from.
+ 
+Every player has to choose a name and submit your score at the end of the game for it to display on the leaderboard.
+
+
+
 
 ## Live Demo
 
