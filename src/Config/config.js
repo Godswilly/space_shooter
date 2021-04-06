@@ -5,7 +5,7 @@ export default {
   parent: 'star-fall',
   width: 800,
   height: 600,
-  backgroundColor: '#2d2d2d',
+  backgroundColor: '#55ceff',
   pixelArt: true,
   dom: {
     createContainer: true,
@@ -13,7 +13,7 @@ export default {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 300 },
+      gravity: { y: 200 },
       debug: false,
     },
   },

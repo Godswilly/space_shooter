@@ -1,7 +1,10 @@
 # STAR-FALL
 
-
 This project is an RPG game built with Phaser 3, a JavaScript game framework designed to create 2D games. The user can collect coins which depicts star live to get score , without touching the bullets fired.
+
+## Game Design Documentation
+
+[Link here](https://gamedevelopment.tutsplus.com/articles/how-and-why-to-write-a-great-game-design-document--cms-23545/)
 
 ## Live Demo
 

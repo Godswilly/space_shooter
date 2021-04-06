@@ -1,4 +1,5 @@
-/* eslint-disable */
+/* eslint-disable radix */
+/* eslint-disable no-plusplus */
 import Phaser from 'phaser';
 
 export default class PreloaderScene extends Phaser.Scene {
@@ -88,7 +89,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('box', 'assets/ui/grey_box.png');
     this.load.image('checkedBox', 'assets/ui/blue_boxCheckmark.png');
     this.load.audio('bgMusic', ['assets/image/TownTheme.mp3']);
-    this.load.spritesheet('player', 'assets/image/dude.png', { frameWidth: 32, frameHeight: 32 })
+    this.load.spritesheet('player', 'assets/image/dude.png', { frameWidth: 32, frameHeight: 32 });
     this.load.image('map', 'assets/image/grass.png');
     this.load.image('coins', 'assets/image/coin.png', { width: 32, height: 32 });
     this.load.image('sky', 'assets/image/sky.png');
