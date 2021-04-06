@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { get, save } from '../Objects/apiScore';
 
 jest.mock('../Objects/apiScore');
@@ -14,18 +12,18 @@ describe('Api score tests', () => {
     },
   });
 
-  save.mockImplementation((name, score) => new Promise((resolve, reject) => {
+  save.mockImplementation((name, score) => new Promise((resolve) => {
     if (!name) {
-      reject({ result: 'Name empty' });
+      ({ result: 'Name empty' }).catch((err) => err);
     } else if (!score) {
-      reject({ result: 'Invalid score' });
+      ({ result: 'Invalid score' }).catch((err) => err);
     } else {
       resolve({ result: 'Succcess' });
     }
   }));
 
   test('should get users', () => {
-    get().then(response => expect(response).toEqual({
+    get().then((response) => expect(response).toEqual({
       data: {
         result: [
           { name: 'name1', score: 100 },
@@ -36,17 +34,17 @@ describe('Api score tests', () => {
   });
 
   test('should post new score', () => {
-    save('name1', 100).then(response => expect(response)
+    save('name1', 100).then((response) => expect(response)
       .toEqual({ result: 'Succcess' }));
   });
 
   test('it should fail when a name is not given,', () => {
-    save().catch(err => expect(err)
+    save().catch((err) => expect(err)
       .toEqual({ result: 'Name empty' }));
   });
 
   test('it should fail when a score is not given', () => {
-    save('name1').catch(err => expect(err)
+    save('name1').catch((err) => expect(err)
       .toEqual({ result: 'Invalid score' }));
   });
 });
